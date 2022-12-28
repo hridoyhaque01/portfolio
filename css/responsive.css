@@ -1,3 +1,18 @@
+@media screen and (min-width: 576px) and (max-width: 991px) {
+  /* banner start  */
+  .banner-content h2 {
+    font-size: 36px;
+  }
+
+  .banner-title {
+    font-size: 58px;
+  }
+  /* banner end  */
+}
+
+/* @media screen and (max-width: 991px) {
+} */
+
 @media screen and (max-width: 767px) {
   /* header start  */
   .nav-menu {
@@ -20,4 +35,34 @@
     column-gap: 30px;
   }
   /* header end  */
+
+  /* banner start  */
+  .banner-content {
+    margin-top: 60px;
+  }
+  /* banner end  */
+}
+
+@media screen and (max-width: 575px) {
+  /* banner start  */
+
+  .bdr {
+    width: 54px;
+  }
+
+  .banner-content h2 {
+    font-size: 28px;
+  }
+
+  .banner-title {
+    font-size: 42px;
+  }
+  /* banner end  */
+}
+
+@media screen and (max-width: 380px) {
+  .banner-btns {
+    flex-direction: column;
+    row-gap: 20px;
+  }
 }
