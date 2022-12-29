@@ -18,7 +18,18 @@
   src: url(../font-family/Poppins-SemiBold.ttf);
 }
 
-* {
+@font-face {
+  font-family: Inter-Bold;
+  src: url(../font-family/Inter-Bold.ttf);
+}
+
+@font-face {
+  font-family: Basic-Regular;
+  src: url(../font-family/Basic-Regular.ttf);
+}
+
+*,
+ul {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -31,30 +42,46 @@
   --poppins-med: Poppins-Medium;
   --poppins-reg: Poppins-Regular;
   --poppins-semi: Poppins-Medium;
-
+  --inter-bold: Inter-Bold;
+  --basic-reg: Basic-Regular;
   /* common color  */
   --blue: #5454d4;
   --para-color: #6d6d6d;
   --white-btn: #dddddd;
   --white: #fff;
   --black: #14171d;
+  /* font size  */
+  --font-84: 84px;
+  --font-68: 68px;
+  --font-48: 48px;
+  --font-38: 38px;
+  --font-34: 34px;
+  --font-28: 28px;
+  --font-24: 24px;
+  --font-22: 22px;
+  --font-20: 20px;
+  --font-18: 18px;
+  --font-16: 16px;
+  --font-14: 14px;
 }
 
 body[data-theme="dark"] {
   --bgColor: #14171d;
   --bannerBg: #191c23;
   --color: #fff;
+  --titleColor: #1f2326;
 }
 
 body[data-theme="light"] {
   --bgColor: #fff;
   --bannerBg: #f9f9f9;
   --color: #1d1d1d;
+  --titleColor: #d9d9d9;
 }
 
 body {
   font-family: var(--poppins-reg);
-  font-size: 16px;
+  font-size: var(--font-16);
   color: var(--color);
   background-color: var(--bgColor);
 }
@@ -63,8 +90,8 @@ body {
   font-family: var(--bebas);
 }
 
-.para {
-  color: #6d6d6d;
+.inter {
+  font-family: var(--inter-bold);
 }
 
 a {
@@ -75,6 +102,14 @@ h1,
 h2,
 h4 {
   margin: 0;
+}
+
+p {
+  color: var(--para-color);
+}
+
+li {
+  list-style: none;
 }
 /* header start  */
 
@@ -173,7 +208,7 @@ body[data-theme="light"] .theme-changer i:last-child {
 }
 
 .banner-content h2 {
-  font-size: 40px;
+  font-size: var(--font-38);
   margin-left: 14px;
 }
 
@@ -188,7 +223,7 @@ body[data-theme="light"] .theme-changer i:last-child {
 .common-btn {
   position: relative;
   display: inline-block;
-  padding: 9px 18px;
+  padding: 12px 30px;
   font-family: Poppins-SemiBold;
   font-size: 18px;
   border-radius: 4px;
@@ -233,3 +268,152 @@ body[data-theme="light"] .theme-changer i:last-child {
 .white-btn:hover {
   color: var(--black);
 }
+
+/* banner section end  */
+
+/* about section start  */
+
+.common-sec {
+  padding: 120px 0;
+}
+
+.about-img {
+  position: relative;
+}
+
+.profile-back {
+  position: absolute;
+  top: 132px;
+  right: 45px;
+  z-index: -1;
+}
+
+.dots {
+  fill: var(--color);
+}
+
+.sec-title {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: var(--font-68);
+  line-height: var(--font-68);
+  color: var(--titleColor);
+  text-transform: uppercase;
+}
+
+.sec-title h2 {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: var(--font-34);
+}
+
+.about-title h2 {
+  left: 0;
+  transform: translateX(0);
+}
+
+.social {
+  column-gap: 16px;
+}
+
+.social li a {
+  display: flex;
+  height: 40px;
+  width: 40px;
+  font-size: var(--font-20);
+  color: var(--color);
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--titleColor);
+  transition: all 0.3s ease-in-out;
+}
+
+.social li a:hover {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+/* about section end  */
+
+/* art section start  */
+
+.art-content h2 {
+  font-family: var(--basic-reg);
+  font-size: var(--font-68);
+}
+
+.art-content p {
+  margin-top: 25px;
+}
+
+.quote {
+  margin-top: 25px;
+  padding: 10px 30px;
+  font-family: var(--basic-reg);
+  font-size: var(--font-22);
+  border-left: 4px solid var(--blue);
+}
+
+/* art section end  */
+
+/* qualification section start  */
+
+.qualification-content h2 {
+  font-family: var(--poppins-semi);
+  font-size: var(--font-24);
+  margin-bottom: 20px;
+}
+
+.single-content {
+  position: relative;
+  padding-left: 34px;
+  margin-top: 14px;
+}
+
+.dot-line::before,
+.dot::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: var(--blue);
+}
+
+.dot-line::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 9px;
+  height: 82%;
+  width: 3px;
+  background-color: var(--blue);
+}
+
+.single-content h4 {
+  font-size: var(--font-18);
+  margin-bottom: 12px;
+}
+
+/* about section end  */
+
+/* about section start  */
+
+/* about section end  */
+
+/* about section start  */
+
+/* about section end  */
+
+/* about section start  */
+
+/* about section end  */
