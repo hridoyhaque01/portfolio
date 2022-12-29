@@ -17,7 +17,6 @@ const changeHeaderTheme = () => {
   } else {
     header.classList.remove("header-down");
   }
-  console.log(scrollTop);
 };
 
 window.addEventListener("scroll", changeHeaderTheme);
