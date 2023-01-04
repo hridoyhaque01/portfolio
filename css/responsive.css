@@ -1,3 +1,14 @@
+@media screen and (max-width: 1199px) {
+  /* about section start  */
+
+  .profile-back {
+    left: auto;
+    right: 14px;
+  }
+
+  /* about section start  */
+}
+
 @media screen and (min-width: 576px) and (max-width: 991px) {
   /* banner start  */
   .banner-content h2 {
@@ -8,13 +19,32 @@
     font-size: 58px;
   }
   /* banner end  */
+
+  /* art section start  */
+
+  .art-content h2 {
+    font-size: var(--font-48);
+  }
+
+  /* art section end  */
 }
 
-/* @media screen and (max-width: 991px) {
-} */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  /* about section start  */
+
+  .dots {
+    width: 230px;
+    height: 215px;
+  }
+
+  /* about section start  */
+}
 
 @media screen and (max-width: 767px) {
   /* header start  */
+  .header {
+    padding: 15px;
+  }
   .nav-menu {
     position: fixed;
     top: 0;
@@ -41,9 +71,43 @@
     margin-top: 60px;
   }
   /* banner end  */
+
+  /* common section padding  */
+  .common-sec {
+    padding: 120px 0 40px;
+  }
+  /* common section padding  */
+
+  /* about start  */
+
+  .title {
+    font-size: var(--font-48);
+    line-height: 48px;
+  }
+
+  .sec-title h2 {
+    font-size: var(--font-24);
+  }
+
+  .profile-back {
+    left: 215px;
+    right: auto;
+  }
+
+  /* about end  */
+
+  /* common section padding  */
 }
 
 @media screen and (max-width: 575px) {
+  /* header start  */
+
+  .nav-menu {
+    width: 60%;
+  }
+
+  /* header end  */
+
   /* banner start  */
 
   .bdr {
@@ -58,6 +122,23 @@
     font-size: 42px;
   }
   /* banner end  */
+
+  /* about start  */
+
+  .title {
+    font-size: var(--font-38);
+    line-height: 38px;
+  }
+
+  .sec-title h2 {
+    font-size: var(--font-22);
+  }
+
+  .dots {
+    display: none;
+  }
+
+  /* about end  */
 }
 
 @media screen and (max-width: 380px) {
@@ -65,4 +146,33 @@
     flex-direction: column;
     row-gap: 20px;
   }
+  /* banner end  */
+  /* about start  */
+  .title {
+    font-size: var(--font-34);
+    line-height: 34px;
+  }
+
+  .sec-title h2 {
+    font-size: var(--font-20);
+  }
+  .about-footer {
+    flex-direction: column;
+    align-items: flex-start !important;
+    row-gap: 20px;
+  }
+  /* about end  */
+
+  /* art section start  */
+
+  .art-content h2 {
+    font-size: var(--font-34);
+  }
+
+  .quote {
+    padding: 5px 0 5px 20px;
+    font-size: var(--font-18);
+  }
+
+  /* art section end  */
 }
