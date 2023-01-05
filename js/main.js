@@ -41,7 +41,7 @@ navLinks.forEach((link) => link.addEventListener("click", closeNabar));
 const navbarLinks = document.querySelectorAll("#navbarNav .nav-link");
 
 const navbarActive = () => {
-  let position = window.scrollY + 200;
+  let position = window.scrollY + 100;
   navLinks.forEach((link) => {
     if (!link.hash) return;
     const section = document.querySelector(link.hash);
@@ -88,14 +88,14 @@ const projectSlider = document.getElementById("project-slider");
 
 if (projectSlider) {
   var swiper = new Swiper(".project-slider", {
-    slidesPerView: 3,
+    slidesPerView: 1,
     loop: true,
     spaceBetween: 30,
     freeMode: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 2500,
+    //   disableOnInteraction: false,
+    // },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -107,16 +107,12 @@ if (projectSlider) {
     breakpoints: {
       575: {
         slidesPerView: 2,
-        spaceBetween: 40,
+        spaceBetween: 30,
       },
       767: {
-        slidesPerView: 2,
-        spaceBetween: 50,
-      },
-      991: {
         slidesPerView: 3,
-        spaceBetween: 50,
       },
+
       1080: {
         slidesPerView: 4,
         spaceBetween: 50,
@@ -138,3 +134,5 @@ function aos_init() {
   });
 }
 aos_init();
+
+// contact us ====>
