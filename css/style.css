@@ -390,6 +390,10 @@ body[data-theme="light"] .theme-changer i:last-child {
 
 /* qualification section start  */
 
+.qualification-title {
+  margin-bottom: 80px;
+}
+
 .qualification-content h2 {
   font-family: var(--poppins-semi);
   font-size: var(--font-24);
@@ -546,8 +550,44 @@ body[data-theme="light"] .theme-changer i:last-child {
   padding: 80px 0;
 }
 
-.swiper-slide {
+.slider-content {
+  position: relative;
   text-align: center;
+  overflow: hidden;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.slider-details {
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 55%;
+  height: 100%;
+  padding: 12px;
+  background-color: var(--bannerBg);
+  transition: 0.4s ease-in-out;
+}
+
+.slider-content:hover .slider-details {
+  right: 0;
+}
+
+.slider-details p {
+  font-size: var(--font-48);
+}
+
+.slider-details h4 {
+  margin: 12px 0;
+  font-size: var(--font-18);
+}
+
+.slider-details a {
+  color: inherit;
+  transition: 0.3s ease-in-out;
+}
+
+.slider-details a:hover {
+  color: var(--blue);
 }
 
 .arrows {
@@ -640,7 +680,8 @@ body[data-theme="light"] .theme-changer i:last-child {
 }
 
 .connect li {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
+  position: relative;
   display: flex;
   align-items: center;
   column-gap: 20px;
@@ -649,6 +690,23 @@ body[data-theme="light"] .theme-changer i:last-child {
   background-color: var(--bannerBg);
   border-radius: 5px;
   cursor: pointer;
+}
+
+.connect li::after {
+  content: "copied!";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  color: var(--blue);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.connect li.show::after {
+  visibility: visible;
+  opacity: 1;
 }
 
 .connect li a {

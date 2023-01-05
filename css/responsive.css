@@ -120,6 +120,17 @@
   }
 
   /* about end  */
+  /* qualification end  */
+
+  .gaps {
+    margin-top: 30px;
+  }
+
+  .gaps:first-child {
+    margin-top: 0;
+  }
+
+  /* qualification end  */
   /* achivement start  */
 
   .achivement::before {
@@ -175,6 +186,15 @@
   }
 
   /* about end  */
+
+  /* art section start  */
+
+  .art-content h2 {
+    font-size: var(--font-34);
+  }
+
+  /* art section end  */
+
   /* achivement start  */
 
   .achivement-boxes {
@@ -223,14 +243,16 @@
 
   /* art section start  */
 
-  .art-content h2 {
-    font-size: var(--font-34);
-  }
-
   .quote {
     padding: 5px 0 5px 20px;
     font-size: var(--font-18);
   }
 
   /* art section end  */
+  /* contact section start  */
+  .connect li::after {
+    top: -24px;
+    transform: translateY(0);
+  }
+  /* contact section end  */
 }

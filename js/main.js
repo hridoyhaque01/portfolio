@@ -136,3 +136,27 @@ function aos_init() {
 aos_init();
 
 // contact us ====>
+
+const contectLists = document.querySelectorAll("#connect li");
+
+contectLists.forEach((item) => {
+  item.addEventListener("click", async () => {
+    const texts = item.querySelector("span").innerHTML;
+    try {
+      await navigator.clipboard.writeText(texts);
+      item.classList.add("show");
+      setTimeout(() => {
+        item.classList.remove("show");
+      }, 1200);
+    } catch (err) {
+      console.log("got some error");
+    }
+  });
+});
+
+// counter effect === >
+
+$(".counter").counterUp({
+  delay: 10,
+  time: 1400,
+});
