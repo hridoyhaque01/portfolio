@@ -62,6 +62,34 @@ window.addEventListener("scroll", navbarActive);
 
 // header end  ===>
 
+const formList = document.querySelectorAll(".form-lists ul li"),
+  buttons = document.querySelectorAll(".buttons .hire-btn"),
+  nextBtns = document.querySelectorAll(".buttons .next-btns"),
+  prevBtns = document.querySelectorAll(".buttons .prev-btns"),
+  forms = document.querySelectorAll(".single-form");
+
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    button.classList.remove("active");
+  });
+});
+
+nextBtns.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    formList[index + 1].classList.add("active");
+  });
+});
+
+prevBtns.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    formList[index + 1].classList.remove("active");
+  });
+});
+
+// banner modal form final setup start ====>
+
+// banner modal form final setup end ====>
+
 // change theme start===>
 
 const themeChangerBtn = document.getElementById("theme-changer");
@@ -137,16 +165,17 @@ aos_init();
 
 // contact us ====>
 
-const contectLists = document.querySelectorAll("#connect li");
+const contectLists = document.querySelectorAll("#connect .copy");
 
 contectLists.forEach((item) => {
   item.addEventListener("click", async () => {
-    const texts = item.querySelector("span").innerHTML;
+    const texts = item.previousElementSibling.innerHTML;
+    const parent = item.parentElement;
     try {
       await navigator.clipboard.writeText(texts);
-      item.classList.add("show");
+      parent.classList.add("show");
       setTimeout(() => {
-        item.classList.remove("show");
+        parent.classList.remove("show");
       }, 1200);
     } catch (err) {
       console.log("got some error");

@@ -25,18 +25,18 @@
     <header class="header fixed-top" id="header">
       <nav class="navbar navbar-expand">
         <div class="container-lg">
-          <a href="index.html" class="navbar-brand">
+          <a href="index.html" class="navbar-brand logo">
             <img src="images/logo-dark.png" alt="logo" class="img-fluid" />
             <img src="images/logo-white.png" alt="logo" class="img-fluid" />
           </a>
 
           <div class="nav-menu ms-auto" id="navbar-menu">
             <div
-              class="close-btn menu-btns d-md-none d-flex align-items-center"
+              class="close-btn menu-btns d-lg-none d-flex align-items-center"
             >
               <i class="bx bx-x"></i>
             </div>
-            <ul class="navbar-nav mt-4 mt-md-0" id="navbarNav">
+            <ul class="navbar-nav menu-lists mt-4 mt-lg-0" id="navbarNav">
               <li class="nav-item">
                 <a href="#banner" class="nav-link active">Home</a>
               </li>
@@ -58,14 +58,14 @@
             </ul>
           </div>
           <div
-            class="theme-changer ms-auto ms-md-3 ms-lg-5 d-flex align-items-center"
+            class="theme-changer ms-auto ms-lg-3 ms-lg-5 d-flex align-items-center"
             id="theme-changer"
           >
             <i class="bx bxs-moon"></i>
             <i class="bx bxs-sun"></i>
           </div>
           <div
-            class="menu-btn menu-btns ms-4 d-md-none d-flex align-items-center"
+            class="menu-btn menu-btns ms-4 d-lg-none d-flex align-items-center"
           >
             <i class="bx bx-menu-alt-right"></i>
           </div>
@@ -104,13 +104,592 @@
                 consequatur illum, deserunt esse iusto rerum nulla placeat
                 adipisci, omnis praesentium mollitia!
               </p>
-              <div class="banner-btns d-inline-flex mt-4">
-                <a href="#" class="common-btn blue-btn">download CV</a>
-                <a href="#" class="common-btn white-btn">my work</a>
+              <div class="banner-btn">
+                <a
+                  href="#hiringModal"
+                  data-bs-toggle="modal"
+                  class="common-btn blue-btn"
+                  >hire me</a
+                >
               </div>
             </div>
           </div>
         </div>
+
+        <!-- banner hiring modal start -->
+        <div class="modal fade" id="hiringModal" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered dialog">
+            <div class="modal-content hiring-content">
+              <div class="modal-body hiring-body">
+                <div class="hiring-title">
+                  <div class="logo hiring-logo">
+                    <img
+                      src="images/logo-dark.png"
+                      alt="logo"
+                      class="img-fluid"
+                    />
+                    <img
+                      src="images/logo-white.png"
+                      alt="logo"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <p>Fill the form for hiring me.</p>
+                </div>
+                <!-- form content  -->
+
+                <div class="hiring-procces">
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="form-lists">
+                        <ul class="d-flex">
+                          <li class="d-flex align-items-center active">
+                            <span
+                              class="count d-inline-flex align-items-center justify-content-center"
+                              >1</span
+                            ><span class="txt">About Info</span>
+                          </li>
+                          <li class="line d-flex align-items-center">
+                            <span
+                              class="count d-inline-flex align-items-center justify-content-center"
+                              >2</span
+                            ><span class="txt">Works Info</span>
+                          </li>
+                          <li class="line d-flex align-items-center">
+                            <span
+                              class="count d-inline-flex align-items-center justify-content-center"
+                              >3</span
+                            ><span class="txt">Description</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-lg-8">
+                      <div class="form-content">
+                        <!-- Pills navs -->
+
+                        <form action="#">
+                          <div class="tab-content about common-fields">
+                            <!-- about form  -->
+
+                            <div
+                              class="tab-pane fade show active single-form"
+                              id="aboutContent"
+                              role="tabpanel"
+                              aria-labelledby="ex1-tab-1"
+                            >
+                              <div class="row">
+                                <div class="col-md-6 mb-4">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="name"
+                                    placeholder="name..."
+                                    required
+                                  />
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                  <input
+                                    type="email"
+                                    class="form-control"
+                                    id="email"
+                                    placeholder="email..."
+                                    required
+                                  />
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-6 mb-4">
+                                  <input
+                                    type="number"
+                                    class="form-control"
+                                    id="number"
+                                    placeholder="contact number..."
+                                    required
+                                  />
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                  <select
+                                    class="form-select"
+                                    id="country"
+                                    aria-describedby="validationServer04Feedback"
+                                    required
+                                  >
+                                    <option selected disabled value="">
+                                      Country
+                                    </option>
+                                    <option value="bangladesh">
+                                      Bangladesh
+                                    </option>
+                                    <option value="india">India</option>
+                                    <option value="pakistan">Pakistan</option>
+                                    <option value="australia">Australia</option>
+                                    <option value="usa">USA</option>
+                                    <option value="uk">UK</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col mb-4">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="address"
+                                    placeholder="address..."
+                                  />
+                                </div>
+                              </div>
+                              <div class="buttons">
+                                <ul class="nav btns-lists">
+                                  <li class="nav-item">
+                                    <a
+                                      class="common-btn blue-btn hire-btn next-btns"
+                                      data-bs-toggle="pill"
+                                      href="#worksContent"
+                                      >next</a
+                                    >
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+
+                            <!-- about form  -->
+
+                            <!-- works form  -->
+
+                            <div
+                              class="tab-pane fade single-form"
+                              id="worksContent"
+                              role="tabpanel"
+                              aria-labelledby="ex1-tab-1"
+                            >
+                              <!-- select fields  -->
+
+                              <div class="select-field">
+                                <!-- feilds buttons  -->
+
+                                <ul class="nav field-lists">
+                                  <li class="nav-item">
+                                    <a
+                                      class="field-btn active"
+                                      data-bs-toggle="pill"
+                                      href="#frontEnd"
+                                      >Front-End</a
+                                    >
+                                  </li>
+                                  <li class="nav-item">
+                                    <a
+                                      class="field-btn"
+                                      data-bs-toggle="pill"
+                                      href="#backEnd"
+                                      >back-End</a
+                                    >
+                                  </li>
+                                  <li class="nav-item">
+                                    <a
+                                      class="field-btn"
+                                      data-bs-toggle="pill"
+                                      href="#fullStack"
+                                      >Fullstack</a
+                                    >
+                                  </li>
+                                </ul>
+
+                                <!-- feilds buttons  -->
+                              </div>
+
+                              <!-- select fields  -->
+
+                              <div class="tab-content common-fields">
+                                <!-- front end  -->
+
+                                <div
+                                  class="tab-pane fade show active"
+                                  id="frontEnd"
+                                  role="tabpanel"
+                                  aria-labelledby="ex1-tab-1"
+                                >
+                                  <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                      <select
+                                        class="form-select"
+                                        id="Ftodo"
+                                        aria-describedby="validationServer04Feedback"
+                                        required
+                                      >
+                                        <option selected disabled value="">
+                                          Select Todos
+                                        </option>
+                                        <option>Re-Design</option>
+                                        <option>Fix Problems</option>
+                                        <option>Responsive Design</option>
+                                      </select>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                      <select
+                                        class="form-select"
+                                        id="Fbuilder"
+                                        aria-describedby="validationServer04Feedback"
+                                        required
+                                      >
+                                        <option selected disabled value="">
+                                          Select Builder
+                                        </option>
+                                        <option>CMS</option>
+                                        <option>Custom Code</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                      <input
+                                        type="number"
+                                        class="form-control"
+                                        id="FpageCount"
+                                        placeholder="page count.."
+                                        required
+                                      />
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                      <input
+                                        type="number"
+                                        class="form-control"
+                                        id="Fbudget"
+                                        placeholder="budget..."
+                                        required
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col mb-4">
+                                      <textarea
+                                        class="form-control"
+                                        id="FwebDetails"
+                                        placeholder="Website details..."
+                                      ></textarea>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!-- front end  -->
+
+                                <!-- backend end  -->
+
+                                <div
+                                  class="tab-pane fade"
+                                  id="backEnd"
+                                  role="tabpanel"
+                                  aria-labelledby="ex1-tab-1"
+                                >
+                                  <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                      <select
+                                        class="form-select"
+                                        id="Btodo"
+                                        aria-describedby="validationServer04Feedback"
+                                        required
+                                      >
+                                        <option selected disabled value="">
+                                          Select Todos
+                                        </option>
+
+                                        <option value="Fix Problems">
+                                          Fix Problems
+                                        </option>
+                                        <option value="backend development">
+                                          backend development
+                                        </option>
+                                      </select>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                      <select
+                                        class="form-select"
+                                        id="Bbuilder"
+                                        aria-describedby="validationServer04Feedback"
+                                        required
+                                      >
+                                        <option selected disabled value="">
+                                          Select Builder
+                                        </option>
+                                        <option>CMS</option>
+                                        <option>Custom Code</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                      <input
+                                        type="number"
+                                        class="form-control"
+                                        id="BpageCount"
+                                        placeholder="page count..."
+                                        required
+                                      />
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                      <input
+                                        type="number"
+                                        class="form-control"
+                                        id="Bbudget"
+                                        placeholder="budget..."
+                                        required
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                      <select
+                                        class="form-select"
+                                        id="BbackLang"
+                                        aria-describedby="validationServer04Feedback"
+                                        required
+                                      >
+                                        <option selected disabled value="">
+                                          Select language
+                                        </option>
+                                        <option value="php">php</option>
+                                        <option value="node">node js</option>
+                                        <option value="python">python</option>
+                                      </select>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                      <select
+                                        class="form-select"
+                                        id="Bdatabase"
+                                        aria-describedby="validationServer04Feedback"
+                                        required
+                                      >
+                                        <option selected disabled value="">
+                                          select db lang...
+                                        </option>
+                                        <option value="oracle">Oracle</option>
+                                        <option value="MySQL">MySQL</option>
+                                        <option value="PostgreSQL">
+                                          PostgreSQL
+                                        </option>
+                                        <option value="MongoDB">MongoDB</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col mb-4">
+                                      <textarea
+                                        class="form-control"
+                                        id="Bdesc"
+                                        placeholder="Website Details..."
+                                        required
+                                      ></textarea>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!-- backend end  -->
+
+                                <!-- fullstack -->
+
+                                <div
+                                  class="tab-pane fade"
+                                  id="fullStack"
+                                  role="tabpanel"
+                                  aria-labelledby="ex1-tab-1"
+                                >
+                                  <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                      <select
+                                        class="form-select"
+                                        id="Futodo"
+                                        aria-describedby="validationServer04Feedback"
+                                        required
+                                      >
+                                        <option selected disabled value="">
+                                          Select Todos
+                                        </option>
+
+                                        <option value="Fix Problems">
+                                          Fix Problems
+                                        </option>
+                                        <option value="backend development">
+                                          backend development
+                                        </option>
+                                      </select>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                      <select
+                                        class="form-select"
+                                        id="Fubuilder"
+                                        aria-describedby="validationServer04Feedback"
+                                        required
+                                      >
+                                        <option selected disabled value="">
+                                          Select Builder
+                                        </option>
+                                        <option>CMS</option>
+                                        <option>Custom Code</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                      <input
+                                        type="number"
+                                        class="form-control"
+                                        id="FupageCount"
+                                        placeholder="page count..."
+                                        required
+                                      />
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                      <input
+                                        type="number"
+                                        class="form-control"
+                                        id="Fubudget"
+                                        placeholder="budget..."
+                                        required
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                      <select
+                                        class="form-select"
+                                        id="FubackLang"
+                                        aria-describedby="validationServer04Feedback"
+                                        required
+                                      >
+                                        <option selected disabled value="">
+                                          Select language
+                                        </option>
+                                        <option value="php">php</option>
+                                        <option value="node">node js</option>
+                                        <option value="python">python</option>
+                                      </select>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                      <select
+                                        class="form-select"
+                                        id="Fudatabase"
+                                        aria-describedby="validationServer04Feedback"
+                                        required
+                                      >
+                                        <option selected disabled value="">
+                                          select db lang...
+                                        </option>
+                                        <option value="oracle">Oracle</option>
+                                        <option value="MySQL">MySQL</option>
+                                        <option value="PostgreSQL">
+                                          PostgreSQL
+                                        </option>
+                                        <option value="MongoDB">MongoDB</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col mb-4">
+                                      <textarea
+                                        class="form-control"
+                                        id="Fudesc"
+                                        placeholder="website Details..."
+                                        required
+                                      ></textarea>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!-- fullstack -->
+                              </div>
+
+                              <div class="buttons">
+                                <ul class="nav btns-lists">
+                                  <li class="nav-item">
+                                    <a
+                                      class="common-btn white-btn hire-btn prev-btns"
+                                      data-bs-toggle="pill"
+                                      href="#aboutContent"
+                                      >previous</a
+                                    >
+                                  </li>
+                                  <li class="nav-item">
+                                    <a
+                                      class="common-btn blue-btn hire-btn next-btns"
+                                      data-bs-toggle="pill"
+                                      href="#descContent"
+                                      >next</a
+                                    >
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+
+                            <!-- works form  -->
+                            <!-- works form  -->
+
+                            <div
+                              class="tab-pane fade single-form"
+                              id="descContent"
+                              role="tabpanel"
+                              aria-labelledby="ex1-tab-1"
+                            >
+                              <div class="row">
+                                <div class="col-12 mb-4">
+                                  <textarea
+                                    class="form-control"
+                                    id="description"
+                                    placeholder="description..."
+                                  ></textarea>
+                                </div>
+                                <div class="col-12">
+                                  <div class="form-check mb-4">
+                                    <input
+                                      type="checkbox"
+                                      class="form-check-input"
+                                      id="askFeed"
+                                    />
+                                    <label
+                                      class="form-check-label"
+                                      for="askFeed"
+                                      >Ask for next project!</label
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="buttons">
+                                <ul class="nav btns-lists">
+                                  <li class="nav-item">
+                                    <a
+                                      class="common-btn white-btn hire-btn prev-btns"
+                                      data-bs-toggle="pill"
+                                      href="#worksContent"
+                                      >previous</a
+                                    >
+                                  </li>
+                                  <li class="nav-item">
+                                    <button
+                                      type="submit"
+                                      class="common-btn hire-btn blue-btn"
+                                    >
+                                      submit
+                                    </button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+
+                            <!-- works form  -->
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal_close-btn" data-bs-dismiss="modal">
+                <i class="bx bx-x"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- banner hiring modal end -->
       </section>
 
       <!-- banner section end  -->
@@ -278,27 +857,39 @@
                   mollit anim id est laborum.
                 </p>
                 <div
-                  class="about-footer d-flex align-items-center justify-content-between mt-5"
+                  class="about-footer d-flex flex-column flex-xl-row align-items-xl-center justify-content-between mt-5"
                 >
-                  <a href="#" class="common-btn blue-btn">hire me</a>
-                  <ul class="social d-flex align-items-center p-0">
+                  <div class="about-btns d-inline-flex">
+                    <a href="#" class="common-btn white-btn">download cv</a>
+                    <a href="#projects" class="common-btn blue-btn">my works</a>
+                  </div>
+                  <ul class="social d-flex align-items-center p-0 mt-4 mt-xl-0">
                     <li>
-                      <a href="#">
+                      <a
+                        href="https://web.facebook.com/hridoyhaque01/"
+                        target="_blank"
+                      >
                         <i class="bx bxl-facebook"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a
+                        href="https://www.instagram.com/hridoyhaque01/"
+                        target="_blank"
+                      >
                         <i class="bx bxl-instagram"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="https://twitter.com/home" target="_blank">
                         <i class="bx bxl-twitter"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a
+                        href="https://www.linkedin.com/in/hridoyhaque/"
+                        target="_blank"
+                      >
                         <i class="bx bxl-linkedin"></i>
                       </a>
                     </li>
@@ -317,7 +908,16 @@
       <section class="art common-sec">
         <div class="container-lg">
           <div class="row align-items-center">
-            <div class="col-md-7" data-aos="fade-up">
+            <div
+              class="col-md-5 order-md-2"
+              data-aos="fade-left"
+              data-aos-delay="400"
+            >
+              <div class="artist text-start text-md-center">
+                <img src="images/product.png" alt="artist" class="img-fluid" />
+              </div>
+            </div>
+            <div class="col-md-7 order-md-1 mt-5 mt-md-0" data-aos="fade-up">
               <div class="art-content">
                 <h2>I Create Products Not Just Art.</h2>
                 <p>
@@ -334,15 +934,6 @@
                   options global usage. Unlimited rewards. enjoy attracti exible
                   ayment options global usage.
                 </p>
-              </div>
-            </div>
-            <div
-              class="col-md-5 mt-5 mt-md-0"
-              data-aos="fade-left"
-              data-aos-delay="400"
-            >
-              <div class="artist">
-                <img src="images/product.png" alt="artist" class="img-fluid" />
               </div>
             </div>
           </div>
@@ -779,7 +1370,7 @@
           <div class="row blog-part">
             <div class="col-md-6" data-aos="fade-right" data-aos-delay="300">
               <div class="single-blog">
-                <div>
+                <div class="blog-img">
                   <img
                     src="images/blog/blog-1.png"
                     alt="blog 1"
@@ -807,8 +1398,8 @@
                     <img src="images/writer.png" alt="writer profile" />
                   </div>
                   <div class="writer-details">
-                    <h2>ANDREO SMITH</h2>
-                    <p>PRODUCT MANAGER</p>
+                    <h2>hridoy haque</h2>
+                    <p>full stack web developer</p>
                   </div>
                 </div>
               </div>
@@ -819,7 +1410,7 @@
               data-aos-delay="300"
             >
               <div class="single-blog">
-                <div>
+                <div class="blog-img">
                   <img
                     src="images/blog/blog-2.png"
                     alt="blog 1"
@@ -848,8 +1439,8 @@
                     <img src="images/writer.png" alt="writer profile" />
                   </div>
                   <div class="writer-details">
-                    <h2>ANDREO SMITH</h2>
-                    <p>PRODUCT MANAGER</p>
+                    <h2>hridoy haque</h2>
+                    <p>full stack web developer</p>
                   </div>
                 </div>
               </div>
@@ -882,20 +1473,29 @@
                   <li data-aos="fade-right" data-aos-delay="100">
                     <a href="tel:01973873877"><i class="bx bx-phone"></i></a>
                     <span>+01973873877</span>
+                    <abbr title="copy" class="ms-auto copy"
+                      ><i class="bx bxs-copy"></i
+                    ></abbr>
                   </li>
                   <li data-aos="fade-right " data-aos-delay="200">
                     <a href="mailto:example@gmail.com"
                       ><i class="bx bx-envelope"></i
                     ></a>
                     <span>example@gmail.com</span>
+                    <abbr title="copy" class="ms-auto copy"
+                      ><i class="bx bxs-copy"></i
+                    ></abbr>
                   </li>
                   <li data-aos="fade-right" data-aos-delay="400">
                     <a
-                      href="https://goo.gl/maps/eUEVDT29KivRXcQs8"
+                      href="https://goo.gl/maps/j7S4vm9XpidRarhG6"
                       target="_blank"
                       ><i class="bx bxs-map"></i
                     ></a>
-                    <span>Shajadpur, Thana Rd, Dhaka</span>
+                    <span>CHA, 120/A Matabbar Rd, Dhaka 1212</span>
+                    <abbr title="copy" class="ms-auto copy"
+                      ><i class="bx bxs-copy"></i
+                    ></abbr>
                   </li>
                 </ul>
                 <div
@@ -904,7 +1504,7 @@
                   data-aos-delay="500"
                 >
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1321.1471266122255!2d90.42338460766652!3d23.787023394510996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7bd58ca3101%3A0x3d5fb3e82e7dda0!2sBaitul%20Mahfuz%20Jame%20Masjid!5e1!3m2!1sen!2sbd!4v1672852126285!5m2!1sen!2sbd"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d554.4131432979023!2d90.42381596683036!3d23.78563426917836!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c702701a0237%3A0x3b96491fd4684ebb!2sBiswas%20Smriti%20Tower!5e1!3m2!1sen!2sbd!4v1674712338791!5m2!1sen!2sbd"
                     style="border: 0; width: 100%"
                     allowfullscreen=""
                     loading="lazy"
@@ -915,22 +1515,31 @@
                 <p class="text-capitalize" data-aos="fade-in">follow us</p>
                 <ul class="contact-social social d-flex align-items-center p-0">
                   <li data-aos="fade-up" data-aos-delay="100">
-                    <a href="#">
+                    <a
+                      href="https://web.facebook.com/hridoyhaque01/"
+                      target="_blank"
+                    >
                       <i class="bx bxl-facebook"></i>
                     </a>
                   </li>
                   <li data-aos="fade-up" data-aos-delay="200">
-                    <a href="#">
+                    <a
+                      href="https://www.instagram.com/hridoyhaque01/"
+                      target="_blank"
+                    >
                       <i class="bx bxl-instagram"></i>
                     </a>
                   </li>
                   <li data-aos="fade-up" data-aos-delay="300">
-                    <a href="#">
+                    <a href="https://twitter.com/home" target="_blank">
                       <i class="bx bxl-twitter"></i>
                     </a>
                   </li>
                   <li data-aos="fade-up" data-aos-delay="400">
-                    <a href="#">
+                    <a
+                      href="https://www.linkedin.com/in/hridoyhaque/"
+                      target="_blank"
+                    >
                       <i class="bx bxl-linkedin"></i>
                     </a>
                   </li>
@@ -948,7 +1557,7 @@
                   <div
                     class="d-flex flex-column flex-sm-row align-items-center form-group"
                   >
-                    <div class="form-floating mb-3">
+                    <div class="form-floating mb-4">
                       <input
                         type="text"
                         class="form-control"
@@ -1016,9 +1625,9 @@
       <div class="footer-bg">
         <div class="container-lg">
           <div class="row justify-content-between">
-            <div class="col-md-3">
+            <div class="col-lg-4 col-md-6">
               <div class="single-part">
-                <a href="index.html" class="navbar-brand">
+                <a href="index.html" class="logo footer-logo">
                   <img
                     src="images/logo-dark.png"
                     alt="logo"
@@ -1030,9 +1639,13 @@
                     class="img-fluid"
                   />
                 </a>
+                <p class="mt-4">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Placeat repellat dolore laudantium quis unde quas tempora.
+                </p>
               </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-lg-3 col-md-6">
               <div class="single-part">
                 <h2>USEFULL LINKS</h2>
                 <ul class="footer-links">
@@ -1045,7 +1658,7 @@
                 </ul>
               </div>
             </div>
-            <div class="col-md-5">
+            <div class="col-lg-4 col-md-8">
               <div class="single-part">
                 <h2>SUBSCRIBE</h2>
                 <p>

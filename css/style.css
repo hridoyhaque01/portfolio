@@ -1,3 +1,5 @@
+@import "material-icons/iconfont/material-icons.css";
+
 @font-face {
   font-family: BebasNeue-Regular;
   src: url(../font-family/BebasNeue-Regular.ttf);
@@ -72,6 +74,8 @@ ul {
   --font-14: 14px;
 }
 
+/* 5454d4 6d6d6d dddddd 191c23 1f2326 0f1217*/
+
 body[data-theme="dark"] {
   --bgColor: #14171d;
   --bannerBg: #191c23;
@@ -143,28 +147,29 @@ section {
   width: 150px;
 }
 
-body[data-theme="dark"] .navbar-brand img:first-child {
+body[data-theme="dark"] .logo img:first-child {
   display: none;
 }
 
-body[data-theme="light"] .navbar-brand img:last-child {
+body[data-theme="light"] .logo img:last-child {
   display: none;
 }
 
-.navbar-nav {
+.menu-lists {
   column-gap: 40px;
   row-gap: 20px;
 }
 
-.nav-link {
+.menu-lists li a {
   color: var(--color);
   display: inline-block;
   position: relative;
   padding: 0 !important;
   text-transform: capitalize;
+  cursor: pointer;
 }
 
-.nav-link::after {
+.menu-lists li a::after {
   content: "";
   position: absolute;
   bottom: -2px;
@@ -177,16 +182,17 @@ body[data-theme="light"] .navbar-brand img:last-child {
   transition: transform 0.3s ease-in-out;
 }
 
-.nav-link.active::after,
-.nav-link:hover::after {
+.menu-lists li a.active::after,
+.menu-lists li a:hover::after {
   transform: scaleX(1);
 }
 
-.nav-link:hover {
+.menu-lists li a:hover {
   color: var(--color);
 }
 
 .theme-changer {
+  margin-bottom: 2px;
   cursor: pointer;
 }
 
@@ -213,7 +219,7 @@ body[data-theme="light"] .theme-changer i:last-child {
 /* header end  */
 
 .banner {
-  padding: 120px 0 60px;
+  padding: 120px 0 80px;
   background-color: var(--bannerBg);
 }
 
@@ -266,8 +272,8 @@ body[data-theme="light"] .theme-changer i:last-child {
   left: 120%;
 }
 
-.banner-btns {
-  column-gap: 34px;
+.banner-btn {
+  margin-top: 40px;
 }
 
 .blue-btn {
@@ -287,6 +293,175 @@ body[data-theme="light"] .theme-changer i:last-child {
 .white-btn:hover {
   color: var(--black);
 }
+
+/* banner modal or form start */
+
+.dialog {
+  position: relative;
+  max-width: 820px;
+}
+
+.hiring-content {
+  position: relative;
+  background-color: var(--bannerBg);
+  border: none;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.hiring-body {
+  padding: 40px;
+}
+
+.hiring-logo {
+  margin-bottom: 15px;
+}
+
+.hiring-logo img {
+  width: 140px;
+}
+
+.hiring-procces {
+  margin-top: 40px;
+}
+
+.form-lists ul {
+  flex-direction: column;
+  row-gap: 50px;
+}
+
+.form-lists ul li {
+  position: relative;
+}
+
+.form-lists ul li span {
+  text-transform: capitalize;
+  font-family: var(--poppins-semi);
+}
+
+.form-lists ul li .count {
+  height: 40px;
+  width: 40px;
+  border: 1px solid var(--color);
+  border-radius: 50%;
+}
+
+.form-lists ul li .txt {
+  padding-left: 20px;
+}
+
+.form-lists ul li.line::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: 20px;
+  height: 50px;
+  width: 1px;
+  background-color: var(--color);
+}
+
+.form-lists ul li.active span {
+  color: var(--blue);
+}
+
+.form-lists ul li.active .count {
+  border-color: var(--blue);
+}
+
+.form-lists ul li.line.active::before {
+  background-color: var(--blue);
+}
+
+.form-content input,
+.form-content select,
+.form-content textarea {
+  background-color: var(--bgColor);
+  border: none;
+  box-shadow: none !important;
+}
+
+.form-content input,
+.form-content select {
+  height: 50px;
+}
+
+.form-content input::placeholder {
+  text-transform: capitalize;
+}
+
+.form-content select {
+  color: var(--para-color) !important;
+}
+
+.form-content label {
+  font-size: var(--font-15);
+  text-transform: capitalize;
+}
+
+.form-content label span {
+  font-size: var(--font-14);
+  color: var(--para-color);
+}
+
+.buttons {
+  margin-top: 14px;
+}
+
+.btns-lists {
+  column-gap: 20px;
+  justify-content: end;
+}
+
+.hire-btn {
+  padding: 6px 30px;
+  font-family: var(--poppins-reg);
+}
+
+.select-field {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.field-lists {
+  column-gap: 20px;
+  background-color: var(--bgColor);
+  padding: 10px 20px;
+  border-radius: 60px;
+}
+
+.field-lists li a {
+  display: inline-block;
+  padding: 8px 20px;
+  text-transform: capitalize;
+  font-size: var(--font-14);
+  color: var(--color);
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.field-lists li a.active {
+  background-color: var(--blue);
+}
+
+.common-fields textarea {
+  height: 110px;
+}
+
+.form-content input[type="checkbox"] {
+  height: 16px;
+}
+
+.modal_close-btn {
+  display: inline-block;
+  position: absolute;
+  top: -40px;
+  right: 20px;
+  font-size: var(--font-28);
+  line-height: 28px;
+  cursor: pointer;
+}
+
+/* banner modal or form end */
 
 /* banner section end  */
 
@@ -342,6 +517,10 @@ body[data-theme="light"] .theme-changer i:last-child {
 .about-title h2 {
   left: 0;
   transform: translateX(0);
+}
+
+.about-btns {
+  column-gap: 30px;
 }
 
 .social {
@@ -609,9 +788,12 @@ body[data-theme="light"] .theme-changer i:last-child {
 .swiper-pagination-bullet {
   height: 10px;
   width: 10px;
+  transition: width 0.3s ease-in-out;
 }
 
 .swiper-pagination-bullet-active {
+  width: 30px;
+  border-radius: 4px;
   background-color: var(--blue);
 }
 /* projects section start  */
@@ -620,6 +802,10 @@ body[data-theme="light"] .theme-changer i:last-child {
 
 .blog-part {
   margin-top: 80px;
+}
+
+.blog-img img {
+  width: 100%;
 }
 
 .single-blog h4 {
@@ -658,11 +844,13 @@ body[data-theme="light"] .theme-changer i:last-child {
 .writer-details h2 {
   font-family: var(--basic-reg);
   font-size: var(--font-20);
+  text-transform: uppercase;
 }
 
 .writer-details p {
   margin-top: 4px;
   font-size: var(--font-14);
+  text-transform: capitalize;
 }
 
 /* blog section end  */
@@ -694,15 +882,13 @@ body[data-theme="light"] .theme-changer i:last-child {
   padding: 18px 20px;
   background-color: var(--bannerBg);
   border-radius: 5px;
-  cursor: pointer;
 }
 
 .connect li::after {
   content: "copied!";
   position: absolute;
-  top: 50%;
+  top: -24px;
   right: 20px;
-  transform: translateY(-50%);
   color: var(--blue);
   visibility: hidden;
   opacity: 0;
@@ -719,6 +905,13 @@ body[data-theme="light"] .theme-changer i:last-child {
   font-size: var(--font-24);
   display: inline-flex;
   align-items: center;
+}
+
+.connect li .copy {
+  font-size: var(--font-20);
+  color: var(--para-color);
+  line-height: 20px;
+  cursor: pointer;
 }
 
 .location {
@@ -798,6 +991,10 @@ body[data-theme="light"] .theme-changer i:last-child {
 
 .single-part {
   margin-bottom: 40px;
+}
+
+.footer-logo img {
+  width: 180px;
 }
 
 .single-part h2 {
