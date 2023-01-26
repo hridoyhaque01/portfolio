@@ -230,7 +230,13 @@
     display: none;
   }
 
+  .form-lists ul li .count {
+    height: 36px;
+    width: 36px;
+  }
+
   .form-lists ul li.line::before {
+    top: 18px;
     left: -50px;
     width: 50px;
   }
@@ -238,6 +244,13 @@
   .form-lists ul li:last-child.line::before {
     left: -50px;
     width: 50px;
+  }
+
+  .form-content input,
+  .form-content select,
+  .form-content textarea,
+  .form-content .checkAsk {
+    font-size: var(--font-14);
   }
 
   .field-lists {
