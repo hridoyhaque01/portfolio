@@ -117,7 +117,7 @@
         </div>
 
         <!-- banner hiring modal start -->
-        <div class="modal fade" id="hiringModal" tabindex="-1">
+        <div class="modal fade form-modal" id="hiringModal" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered dialog">
             <div class="modal-content hiring-content">
               <div class="modal-body hiring-body">
@@ -178,65 +178,69 @@
                               role="tabpanel"
                               aria-labelledby="ex1-tab-1"
                             >
-                              <div class="row">
-                                <div class="col-md-6 mb-4">
-                                  <input
-                                    type="text"
-                                    class="form-control"
-                                    id="name"
-                                    placeholder="name..."
-                                    required
-                                  />
+                              <div class="form-fields">
+                                <div class="row">
+                                  <div class="col-md-6 mb-4">
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="name"
+                                      placeholder="name..."
+                                      required
+                                    />
+                                  </div>
+                                  <div class="col-md-6 mb-4">
+                                    <input
+                                      type="email"
+                                      class="form-control"
+                                      id="email"
+                                      placeholder="email..."
+                                      required
+                                    />
+                                  </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                  <input
-                                    type="email"
-                                    class="form-control"
-                                    id="email"
-                                    placeholder="email..."
-                                    required
-                                  />
+                                <div class="row">
+                                  <div class="col-md-6 mb-4">
+                                    <input
+                                      type="number"
+                                      class="form-control"
+                                      id="number"
+                                      placeholder="contact number..."
+                                      required
+                                    />
+                                  </div>
+                                  <div class="col-md-6 mb-4">
+                                    <select
+                                      class="form-select"
+                                      id="country"
+                                      aria-describedby="validationServer04Feedback"
+                                      required
+                                    >
+                                      <option selected disabled value="">
+                                        Country
+                                      </option>
+                                      <option value="bangladesh">
+                                        Bangladesh
+                                      </option>
+                                      <option value="india">India</option>
+                                      <option value="pakistan">Pakistan</option>
+                                      <option value="australia">
+                                        Australia
+                                      </option>
+                                      <option value="usa">USA</option>
+                                      <option value="uk">UK</option>
+                                    </select>
+                                  </div>
                                 </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-md-6 mb-4">
-                                  <input
-                                    type="number"
-                                    class="form-control"
-                                    id="number"
-                                    placeholder="contact number..."
-                                    required
-                                  />
-                                </div>
-                                <div class="col-md-6 mb-4">
-                                  <select
-                                    class="form-select"
-                                    id="country"
-                                    aria-describedby="validationServer04Feedback"
-                                    required
-                                  >
-                                    <option selected disabled value="">
-                                      Country
-                                    </option>
-                                    <option value="bangladesh">
-                                      Bangladesh
-                                    </option>
-                                    <option value="india">India</option>
-                                    <option value="pakistan">Pakistan</option>
-                                    <option value="australia">Australia</option>
-                                    <option value="usa">USA</option>
-                                    <option value="uk">UK</option>
-                                  </select>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col mb-4">
-                                  <input
-                                    type="text"
-                                    class="form-control"
-                                    id="address"
-                                    placeholder="address..."
-                                  />
+                                <div class="row">
+                                  <div class="col mb-4">
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="address"
+                                      placeholder="address..."
+                                    />
+                                  </div>
                                 </div>
                               </div>
                               <div class="buttons">
@@ -309,64 +313,66 @@
                                   role="tabpanel"
                                   aria-labelledby="ex1-tab-1"
                                 >
-                                  <div class="row">
-                                    <div class="col-md-6 mb-4">
-                                      <select
-                                        class="form-select"
-                                        id="Ftodo"
-                                        aria-describedby="validationServer04Feedback"
-                                        required
-                                      >
-                                        <option selected disabled value="">
-                                          Select Todos
-                                        </option>
-                                        <option>Re-Design</option>
-                                        <option>Fix Problems</option>
-                                        <option>Responsive Design</option>
-                                      </select>
+                                  <div class="form-fields">
+                                    <div class="row">
+                                      <div class="col-md-6 mb-4">
+                                        <select
+                                          class="form-select"
+                                          id="Ftodo"
+                                          aria-describedby="validationServer04Feedback"
+                                          required
+                                        >
+                                          <option selected disabled value="">
+                                            Select Todos
+                                          </option>
+                                          <option>Re-Design</option>
+                                          <option>Fix Problems</option>
+                                          <option>Responsive Design</option>
+                                        </select>
+                                      </div>
+                                      <div class="col-md-6 mb-4">
+                                        <select
+                                          class="form-select"
+                                          id="Fbuilder"
+                                          aria-describedby="validationServer04Feedback"
+                                          required
+                                        >
+                                          <option selected disabled value="">
+                                            Select Builder
+                                          </option>
+                                          <option>CMS</option>
+                                          <option>Custom Code</option>
+                                        </select>
+                                      </div>
                                     </div>
-                                    <div class="col-md-6 mb-4">
-                                      <select
-                                        class="form-select"
-                                        id="Fbuilder"
-                                        aria-describedby="validationServer04Feedback"
-                                        required
-                                      >
-                                        <option selected disabled value="">
-                                          Select Builder
-                                        </option>
-                                        <option>CMS</option>
-                                        <option>Custom Code</option>
-                                      </select>
+                                    <div class="row">
+                                      <div class="col-md-6 mb-4">
+                                        <input
+                                          type="number"
+                                          class="form-control"
+                                          id="FpageCount"
+                                          placeholder="page count.."
+                                          required
+                                        />
+                                      </div>
+                                      <div class="col-md-6 mb-4">
+                                        <input
+                                          type="number"
+                                          class="form-control"
+                                          id="Fbudget"
+                                          placeholder="budget..."
+                                          required
+                                        />
+                                      </div>
                                     </div>
-                                  </div>
-                                  <div class="row">
-                                    <div class="col-md-6 mb-4">
-                                      <input
-                                        type="number"
-                                        class="form-control"
-                                        id="FpageCount"
-                                        placeholder="page count.."
-                                        required
-                                      />
-                                    </div>
-                                    <div class="col-md-6 mb-4">
-                                      <input
-                                        type="number"
-                                        class="form-control"
-                                        id="Fbudget"
-                                        placeholder="budget..."
-                                        required
-                                      />
-                                    </div>
-                                  </div>
-                                  <div class="row">
-                                    <div class="col mb-4">
-                                      <textarea
-                                        class="form-control"
-                                        id="FwebDetails"
-                                        placeholder="Website details..."
-                                      ></textarea>
+                                    <div class="row">
+                                      <div class="col mb-4">
+                                        <textarea
+                                          class="form-control"
+                                          id="FwebDetails"
+                                          placeholder="Website details..."
+                                        ></textarea>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
@@ -381,104 +387,108 @@
                                   role="tabpanel"
                                   aria-labelledby="ex1-tab-1"
                                 >
-                                  <div class="row">
-                                    <div class="col-md-6 mb-4">
-                                      <select
-                                        class="form-select"
-                                        id="Btodo"
-                                        aria-describedby="validationServer04Feedback"
-                                        required
-                                      >
-                                        <option selected disabled value="">
-                                          Select Todos
-                                        </option>
+                                  <div class="form-fields">
+                                    <div class="row">
+                                      <div class="col-md-6 mb-4">
+                                        <select
+                                          class="form-select"
+                                          id="Btodo"
+                                          aria-describedby="validationServer04Feedback"
+                                          required
+                                        >
+                                          <option selected disabled value="">
+                                            Select Todos
+                                          </option>
 
-                                        <option value="Fix Problems">
-                                          Fix Problems
-                                        </option>
-                                        <option value="backend development">
-                                          backend development
-                                        </option>
-                                      </select>
+                                          <option value="Fix Problems">
+                                            Fix Problems
+                                          </option>
+                                          <option value="backend development">
+                                            backend development
+                                          </option>
+                                        </select>
+                                      </div>
+                                      <div class="col-md-6 mb-4">
+                                        <select
+                                          class="form-select"
+                                          id="Bbuilder"
+                                          aria-describedby="validationServer04Feedback"
+                                          required
+                                        >
+                                          <option selected disabled value="">
+                                            Select Builder
+                                          </option>
+                                          <option>CMS</option>
+                                          <option>Custom Code</option>
+                                        </select>
+                                      </div>
                                     </div>
-                                    <div class="col-md-6 mb-4">
-                                      <select
-                                        class="form-select"
-                                        id="Bbuilder"
-                                        aria-describedby="validationServer04Feedback"
-                                        required
-                                      >
-                                        <option selected disabled value="">
-                                          Select Builder
-                                        </option>
-                                        <option>CMS</option>
-                                        <option>Custom Code</option>
-                                      </select>
+                                    <div class="row">
+                                      <div class="col-md-6 mb-4">
+                                        <input
+                                          type="number"
+                                          class="form-control"
+                                          id="BpageCount"
+                                          placeholder="page count..."
+                                          required
+                                        />
+                                      </div>
+                                      <div class="col-md-6 mb-4">
+                                        <input
+                                          type="number"
+                                          class="form-control"
+                                          id="Bbudget"
+                                          placeholder="budget..."
+                                          required
+                                        />
+                                      </div>
                                     </div>
-                                  </div>
-                                  <div class="row">
-                                    <div class="col-md-6 mb-4">
-                                      <input
-                                        type="number"
-                                        class="form-control"
-                                        id="BpageCount"
-                                        placeholder="page count..."
-                                        required
-                                      />
+                                    <div class="row">
+                                      <div class="col-md-6 mb-4">
+                                        <select
+                                          class="form-select"
+                                          id="BbackLang"
+                                          aria-describedby="validationServer04Feedback"
+                                          required
+                                        >
+                                          <option selected disabled value="">
+                                            Select language
+                                          </option>
+                                          <option value="php">php</option>
+                                          <option value="node">node js</option>
+                                          <option value="python">python</option>
+                                        </select>
+                                      </div>
+                                      <div class="col-md-6 mb-4">
+                                        <select
+                                          class="form-select"
+                                          id="Bdatabase"
+                                          aria-describedby="validationServer04Feedback"
+                                          required
+                                        >
+                                          <option selected disabled value="">
+                                            select db lang...
+                                          </option>
+                                          <option value="oracle">Oracle</option>
+                                          <option value="MySQL">MySQL</option>
+                                          <option value="PostgreSQL">
+                                            PostgreSQL
+                                          </option>
+                                          <option value="MongoDB">
+                                            MongoDB
+                                          </option>
+                                        </select>
+                                      </div>
                                     </div>
-                                    <div class="col-md-6 mb-4">
-                                      <input
-                                        type="number"
-                                        class="form-control"
-                                        id="Bbudget"
-                                        placeholder="budget..."
-                                        required
-                                      />
-                                    </div>
-                                  </div>
-                                  <div class="row">
-                                    <div class="col-md-6 mb-4">
-                                      <select
-                                        class="form-select"
-                                        id="BbackLang"
-                                        aria-describedby="validationServer04Feedback"
-                                        required
-                                      >
-                                        <option selected disabled value="">
-                                          Select language
-                                        </option>
-                                        <option value="php">php</option>
-                                        <option value="node">node js</option>
-                                        <option value="python">python</option>
-                                      </select>
-                                    </div>
-                                    <div class="col-md-6 mb-4">
-                                      <select
-                                        class="form-select"
-                                        id="Bdatabase"
-                                        aria-describedby="validationServer04Feedback"
-                                        required
-                                      >
-                                        <option selected disabled value="">
-                                          select db lang...
-                                        </option>
-                                        <option value="oracle">Oracle</option>
-                                        <option value="MySQL">MySQL</option>
-                                        <option value="PostgreSQL">
-                                          PostgreSQL
-                                        </option>
-                                        <option value="MongoDB">MongoDB</option>
-                                      </select>
-                                    </div>
-                                  </div>
-                                  <div class="row">
-                                    <div class="col mb-4">
-                                      <textarea
-                                        class="form-control"
-                                        id="Bdesc"
-                                        placeholder="Website Details..."
-                                        required
-                                      ></textarea>
+                                    <div class="row">
+                                      <div class="col mb-4">
+                                        <textarea
+                                          class="form-control"
+                                          id="Bdesc"
+                                          placeholder="Website Details..."
+                                          required
+                                        ></textarea>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
@@ -493,104 +503,108 @@
                                   role="tabpanel"
                                   aria-labelledby="ex1-tab-1"
                                 >
-                                  <div class="row">
-                                    <div class="col-md-6 mb-4">
-                                      <select
-                                        class="form-select"
-                                        id="Futodo"
-                                        aria-describedby="validationServer04Feedback"
-                                        required
-                                      >
-                                        <option selected disabled value="">
-                                          Select Todos
-                                        </option>
+                                  <div class="form-fields">
+                                    <div class="row">
+                                      <div class="col-md-6 mb-4">
+                                        <select
+                                          class="form-select"
+                                          id="Futodo"
+                                          aria-describedby="validationServer04Feedback"
+                                          required
+                                        >
+                                          <option selected disabled value="">
+                                            Select Todos
+                                          </option>
 
-                                        <option value="Fix Problems">
-                                          Fix Problems
-                                        </option>
-                                        <option value="backend development">
-                                          backend development
-                                        </option>
-                                      </select>
+                                          <option value="Fix Problems">
+                                            Fix Problems
+                                          </option>
+                                          <option value="backend development">
+                                            backend development
+                                          </option>
+                                        </select>
+                                      </div>
+                                      <div class="col-md-6 mb-4">
+                                        <select
+                                          class="form-select"
+                                          id="Fubuilder"
+                                          aria-describedby="validationServer04Feedback"
+                                          required
+                                        >
+                                          <option selected disabled value="">
+                                            Select Builder
+                                          </option>
+                                          <option>CMS</option>
+                                          <option>Custom Code</option>
+                                        </select>
+                                      </div>
                                     </div>
-                                    <div class="col-md-6 mb-4">
-                                      <select
-                                        class="form-select"
-                                        id="Fubuilder"
-                                        aria-describedby="validationServer04Feedback"
-                                        required
-                                      >
-                                        <option selected disabled value="">
-                                          Select Builder
-                                        </option>
-                                        <option>CMS</option>
-                                        <option>Custom Code</option>
-                                      </select>
+                                    <div class="row">
+                                      <div class="col-md-6 mb-4">
+                                        <input
+                                          type="number"
+                                          class="form-control"
+                                          id="FupageCount"
+                                          placeholder="page count..."
+                                          required
+                                        />
+                                      </div>
+                                      <div class="col-md-6 mb-4">
+                                        <input
+                                          type="number"
+                                          class="form-control"
+                                          id="Fubudget"
+                                          placeholder="budget..."
+                                          required
+                                        />
+                                      </div>
                                     </div>
-                                  </div>
-                                  <div class="row">
-                                    <div class="col-md-6 mb-4">
-                                      <input
-                                        type="number"
-                                        class="form-control"
-                                        id="FupageCount"
-                                        placeholder="page count..."
-                                        required
-                                      />
+                                    <div class="row">
+                                      <div class="col-md-6 mb-4">
+                                        <select
+                                          class="form-select"
+                                          id="FubackLang"
+                                          aria-describedby="validationServer04Feedback"
+                                          required
+                                        >
+                                          <option selected disabled value="">
+                                            Select language
+                                          </option>
+                                          <option value="php">php</option>
+                                          <option value="node">node js</option>
+                                          <option value="python">python</option>
+                                        </select>
+                                      </div>
+                                      <div class="col-md-6 mb-4">
+                                        <select
+                                          class="form-select"
+                                          id="Fudatabase"
+                                          aria-describedby="validationServer04Feedback"
+                                          required
+                                        >
+                                          <option selected disabled value="">
+                                            select db lang...
+                                          </option>
+                                          <option value="oracle">Oracle</option>
+                                          <option value="MySQL">MySQL</option>
+                                          <option value="PostgreSQL">
+                                            PostgreSQL
+                                          </option>
+                                          <option value="MongoDB">
+                                            MongoDB
+                                          </option>
+                                        </select>
+                                      </div>
                                     </div>
-                                    <div class="col-md-6 mb-4">
-                                      <input
-                                        type="number"
-                                        class="form-control"
-                                        id="Fubudget"
-                                        placeholder="budget..."
-                                        required
-                                      />
-                                    </div>
-                                  </div>
-                                  <div class="row">
-                                    <div class="col-md-6 mb-4">
-                                      <select
-                                        class="form-select"
-                                        id="FubackLang"
-                                        aria-describedby="validationServer04Feedback"
-                                        required
-                                      >
-                                        <option selected disabled value="">
-                                          Select language
-                                        </option>
-                                        <option value="php">php</option>
-                                        <option value="node">node js</option>
-                                        <option value="python">python</option>
-                                      </select>
-                                    </div>
-                                    <div class="col-md-6 mb-4">
-                                      <select
-                                        class="form-select"
-                                        id="Fudatabase"
-                                        aria-describedby="validationServer04Feedback"
-                                        required
-                                      >
-                                        <option selected disabled value="">
-                                          select db lang...
-                                        </option>
-                                        <option value="oracle">Oracle</option>
-                                        <option value="MySQL">MySQL</option>
-                                        <option value="PostgreSQL">
-                                          PostgreSQL
-                                        </option>
-                                        <option value="MongoDB">MongoDB</option>
-                                      </select>
-                                    </div>
-                                  </div>
-                                  <div class="row">
-                                    <div class="col mb-4">
-                                      <textarea
-                                        class="form-control"
-                                        id="Fudesc"
-                                        placeholder="website Details..."
-                                        required
-                                      ></textarea>
+                                    <div class="row">
+                                      <div class="col mb-4">
+                                        <textarea
+                                          class="form-control"
+                                          id="Fudesc"
+                                          placeholder="website Details..."
+                                          required
+                                        ></textarea>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
@@ -629,26 +643,28 @@
                               role="tabpanel"
                               aria-labelledby="ex1-tab-1"
                             >
-                              <div class="row">
-                                <div class="col-12 mb-4">
-                                  <textarea
-                                    class="form-control"
-                                    id="description"
-                                    placeholder="description..."
-                                  ></textarea>
-                                </div>
-                                <div class="col-12">
-                                  <div class="form-check mb-4">
-                                    <input
-                                      type="checkbox"
-                                      class="form-check-input"
-                                      id="askFeed"
-                                    />
-                                    <label
-                                      class="form-check-label"
-                                      for="askFeed"
-                                      >Ask for next project!</label
-                                    >
+                              <div class="form-feilds">
+                                <div class="row">
+                                  <div class="col-12 mb-4">
+                                    <textarea
+                                      class="form-control"
+                                      id="description"
+                                      placeholder="description..."
+                                    ></textarea>
+                                  </div>
+                                  <div class="col-12">
+                                    <div class="form-check mb-4">
+                                      <input
+                                        type="checkbox"
+                                        class="form-check-input"
+                                        id="askFeed"
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="askFeed"
+                                        >Ask for next project!</label
+                                      >
+                                    </div>
                                   </div>
                                 </div>
                               </div>

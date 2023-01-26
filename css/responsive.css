@@ -92,6 +92,42 @@
     column-gap: 30px;
   }
   /* header end  */
+
+  /* banner start  */
+
+  .form-lists {
+    margin-bottom: 40px;
+  }
+
+  .form-lists ul {
+    flex-direction: row;
+    column-gap: 50px;
+    justify-content: center;
+  }
+
+  .form-lists ul li {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  .form-lists ul li .txt {
+    padding: 0;
+  }
+
+  .form-lists ul li.line::before {
+    top: 20px;
+    left: -72px;
+    height: 1px;
+    width: 95px;
+  }
+
+  .form-lists ul li:last-child.line::before {
+    left: -73px;
+    width: 100px;
+  }
+
+  /* banner end  */
 }
 
 @media screen and (max-width: 767px) {
@@ -172,6 +208,64 @@
   .banner-title {
     font-size: 42px;
   }
+
+  /* modal start  */
+
+  .hiring-body {
+    padding: 20px;
+  }
+
+  .hiring-logo img {
+    width: 110px;
+  }
+
+  .hiring-procces {
+    margin-top: 20px;
+  }
+
+  .form-lists {
+    margin-bottom: 20px;
+  }
+  .form-lists ul li .txt {
+    display: none;
+  }
+
+  .form-lists ul li.line::before {
+    left: -50px;
+    width: 50px;
+  }
+
+  .form-lists ul li:last-child.line::before {
+    left: -50px;
+    width: 50px;
+  }
+
+  .field-lists {
+    column-gap: 0;
+    padding: 8px 10px;
+  }
+
+  .field-lists li a {
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 20px;
+  }
+
+  .select-field {
+    margin-bottom: 20px;
+  }
+
+  .btns-lists {
+    column-gap: 10px;
+    justify-content: start;
+  }
+
+  .hire-btn {
+    font-size: var(--font-14);
+  }
+
+  /* modal end  */
+
   /* banner end  */
 
   /* about start  */

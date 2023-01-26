@@ -296,9 +296,16 @@ body[data-theme="light"] .theme-changer i:last-child {
 
 /* banner modal or form start */
 
-.dialog {
+.form-modal.show {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-modal.show .dialog {
   position: relative;
-  max-width: 820px;
+  max-width: 810px;
+  margin: 0 20px;
 }
 
 .hiring-content {
@@ -370,6 +377,15 @@ body[data-theme="light"] .theme-changer i:last-child {
 .form-lists ul li.line.active::before {
   background-color: var(--blue);
 }
+
+.form-fields {
+  width: 100%;
+  padding-right: 14px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+/* Handle on hover */
 
 .form-content input,
 .form-content select,
@@ -1047,3 +1063,15 @@ body[data-theme="light"] .theme-changer i:last-child {
 }
 
 /* footer section end  */
+
+.form-fields::-webkit-scrollbar {
+  width: 8px;
+  background-color: var(--bgColor);
+  border-radius: 8px;
+  /* position: ; */
+}
+
+.form-fields::-webkit-scrollbar-thumb {
+  background-color: var(--blue);
+  border-radius: 8px;
+}
