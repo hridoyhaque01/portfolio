@@ -3,10 +3,12 @@
 // element selection
 
 const header = document.getElementById("header"),
+  headerHeight = header.offsetHeight,
   navbarMenu = document.getElementById("navbar-menu"),
   menuBtn = document.querySelector(".menu-btn"),
   closeBtn = document.querySelector(".close-btn"),
-  navLinks = document.querySelectorAll(".nav-item .nav-link");
+  navLinks = document.querySelectorAll(".nav-item .nav-link"),
+  arrowBtn = document.querySelector(".arrow-btn");
 
 //   change navbar background color
 
@@ -41,7 +43,7 @@ navLinks.forEach((link) => link.addEventListener("click", closeNabar));
 const navbarLinks = document.querySelectorAll("#navbarNav .nav-link");
 
 const navbarActive = () => {
-  let position = window.scrollY + 100;
+  let position = window.scrollY + headerHeight;
   navLinks.forEach((link) => {
     if (!link.hash) return;
     const section = document.querySelector(link.hash);
@@ -54,11 +56,30 @@ const navbarActive = () => {
     } else {
       link.classList.remove("active");
     }
+
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+      scrollSection(link);
+    });
+  });
+};
+
+const scrollSection = (link) => {
+  const targetId = link.getAttribute("href");
+  const targetSection = document.querySelector(targetId);
+  const targetPosition = targetSection.offsetTop - headerHeight + 20;
+
+  window.scrollTo({
+    top: targetPosition,
+    behavior: "smooth",
   });
 };
 
 window.addEventListener("load", navbarActive);
 window.addEventListener("scroll", navbarActive);
+
+// window.addEventListener("load", navbarActive);
+// window.addEventListener("scroll", navbarActive);
 
 // header end  ===>
 
@@ -189,3 +210,27 @@ $(".counter").counterUp({
   delay: 10,
   time: 1400,
 });
+
+// countert effect end
+
+//project section start
+
+//arrow btn
+
+function scrollWindowTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+function showArrow() {
+  const scrollTop = window.scrollY;
+  if (scrollTop > 620) {
+    arrowBtn.classList.add("show-arrow");
+    arrowBtn.addEventListener("click", scrollWindowTop);
+  } else {
+    arrowBtn.classList.remove("show-arrow");
+  }
+}
+
+window.addEventListener("load", showArrow);
+window.addEventListener("scroll", showArrow);
