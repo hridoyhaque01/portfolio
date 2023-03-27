@@ -782,6 +782,7 @@ body[data-theme="light"] .theme-changer i:last-child {
 }
 
 .project-hover h2 {
+  text-transform: capitalize;
   font-size: var(--font-48);
   font-family: var(--poppins-bold);
   color: var(--white);
